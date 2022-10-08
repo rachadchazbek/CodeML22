@@ -1,5 +1,13 @@
-from transformers import AutoTokenizer, AutoModelForMaskedLM
+import tensorflow as tf
+import numpy as np
 
-tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
+print("TensorFlow version:", tf.__version__)
 
-model = AutoModelForMaskedLM.from_pretrained("xlm-roberta-base")
+# data = load data 
+
+model = tf.keras.Sequential(
+    layers=None, name=None
+)
+
+model.compile()
+model.compute_metrics()
