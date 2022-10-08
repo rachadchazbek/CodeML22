@@ -3,11 +3,8 @@ import numpy as np
 
 print("TensorFlow version:", tf.__version__)
 
-# data = load data 
+# data = load data
+model = tf.keras.models.Sequential([])
 
-model = tf.keras.Sequential(
-    layers=None, name=None
-)
-
-model.compile()
-model.compute_metrics()
+model.compile(optimizer='sgd', loss='mse', metrics=['acc', 'f1_score'])
+model.summary()
