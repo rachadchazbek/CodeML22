@@ -5,17 +5,21 @@ import tensorflow as tf
 # need to modify the path based on the machine
 df = pd.read_csv("CodeML22 datasets\language-identification-datasets.csv")
 
+#============================================
+
 # split dataframe in 2 sets
 train = df[df['Language'].notnull()]
+# probably won't need test because we don't know the answer (y)
 test = df[df['Language'].isnull()]
 
 # splits the train data into x
-train_x = train.drop("ID", axis = 1)
-train_x = train_x.drop("Language", axis = 1)
+x = train.drop("ID", axis = 1)
+x = x.drop("Language", axis = 1)
 # splits the train data into y
-train_y = train.drop("ID", axis = 1)
-train_y = train_y.drop("Text", axis = 1)
+y = train.drop("ID", axis = 1)
+y = y.drop("Text", axis = 1)
 
-print(train_x)
-print(train_y)
+#print(x)
+#print(y)
+
 
